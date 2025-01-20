@@ -1,5 +1,8 @@
 "use client"
 import { useEffect, useState } from "react";
+import { Cart } from "../components/cart";
+
+
 type MovieType = {
   adult: boolean;
   backdrop_path: string;
@@ -42,8 +45,9 @@ export default function Home() {
   }, []);
 
   console.log({ movie });
-  return <div className="">
+  return <div className="h-[100vh] w-[100vw]">
     <h2>{movie?.original_title}</h2>
     <img src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`} alt="" />
+    <Cart />
     </div>;
 }
