@@ -15,28 +15,28 @@ export const Popular = async () => {
   const data = await response.json();
 
   return (
-    <div className="w-[100vw] flex justify-center  " >
-    <div className="flex flex-wrap justify-between w-[79.813rem]">
-    <h2>Popular</h2>
-    <p>see more!</p>
-    <div  className="flex flex-wrap justify-between w-[79.813rem]">
-      {data.results.slice(0, 10).map((movie: MovieType) => {
-        return (
-          <div className="w-[14.375rem] h-[27.438rem] overflow-hidden rounded-[8px] ">
-            <img
-              src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`}
-              alt="..loading"
-              className="w-[14.358rem] h-[21.25rem]"
-            />
-            <div className="bg- bg-yellow-500 w-[14.358rem] h-[4.938rem] p-2">
-                <p>⭐{movie?.vote_average}/10</p>
-                <p>{movie?.original_title}</p>
-            </div>
-          </div>
-        );
-      })}
-    </div>
-    </div>    
+    <div className="w-[100vw] flex justify-center  ">
+      <div className="flex flex-wrap justify-between w-[79.813rem]">
+        <h2>Popular</h2>
+        <p>see more!</p>
+        <div className="flex flex-wrap justify-between w-[79.813rem]">
+          {data.results.slice(0, 10).map((movie: MovieType) => {
+            return (
+              <div className="w-[14.375rem] h-[27.438rem] overflow-hidden rounded-[8px] ">
+                <img
+                  src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`}
+                  alt="..loading"
+                  className="w-[14.358rem] h-[21.25rem]"
+                />
+                <div className="bg- bg-yellow-500 w-[14.358rem] h-[4.938rem] p-2">
+                  <p>⭐{movie?.vote_average}/10</p>
+                  <p>{movie?.original_title}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };
@@ -55,28 +55,28 @@ export const Upcoming = async () => {
   const data = await response.json();
 
   return (
-    <div className="w-[100vw] flex justify-center  " >
-    <div className="flex flex-wrap justify-between w-[79.813rem]">
-    <h2>Upcoming</h2>
-    <p>see more!</p>
-    <div  className="flex flex-wrap justify-between w-[79.813rem]">
-      {data.results.slice(0, 10).map((movie: MovieType) => {
-        return (
-          <div className="w-[14.375rem] h-[27.438rem] overflow-hidden rounded-[8px] ">
-            <img
-              src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`}
-              alt="..loading"
-              className="w-[14.358rem] h-[21.25rem]"
-            />
-            <div className="bg- bg-yellow-500 w-[14.358rem] h-[4.938rem] p-2">
-                <p>⭐{movie?.vote_average}/10</p>
-                <p>{movie?.original_title}</p>
-            </div>
-          </div>
-        );
-      })}
-    </div>
-    </div>    
+    <div className="w-[100vw] flex justify-center  ">
+      <div className="flex flex-wrap justify-between w-[79.813rem]">
+        <h2>Upcoming</h2>
+        <p>see more!</p>
+        <div className="flex flex-wrap justify-between w-[79.813rem]">
+          {data.results.slice(0, 10).map((movie: MovieType) => {
+            return (
+              <div className="w-[14.375rem] h-[27.438rem] overflow-hidden rounded-[8px] ">
+                <img
+                  src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`}
+                  alt="..loading"
+                  className="w-[14.358rem] h-[21.25rem]"
+                />
+                <div className="bg- bg-yellow-500 w-[14.358rem] h-[4.938rem] p-2">
+                  <p>⭐{movie?.vote_average}/10</p>
+                  <p>{movie?.original_title}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };
@@ -95,28 +95,28 @@ export const Top_rated = async () => {
   const data = await response.json();
 
   return (
-    <div className="w-[100vw] flex justify-center  " >
-    <div className="flex flex-wrap justify-between w-[79.813rem]">
-    <h2>Top Rated</h2>
-    <p>see more!</p>
-    <div  className="flex flex-wrap justify-between w-[79.813rem]">
-      {data.results.slice(0, 10).map((movie: MovieType) => {
-        return (
-          <div className="w-[14.375rem] h-[27.438rem] overflow-hidden rounded-[8px] overflow-hidden ">
-            <img
-              src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`}
-              alt="..loading"
-              className="w-[14.358rem] h-[21.25rem]"
-            />
-            <div className="bg- bg-yellow-500 w-[14.358rem] h-[4.938rem] p-2">
-                <p>⭐{movie?.vote_average}/10</p>
-                <p>{movie?.original_title}</p>
-            </div>
-          </div>
-        );
-      })}
-    </div>
-    </div>    
+    <div className="w-[100vw] flex justify-center  ">
+      <div className="flex flex-wrap justify-between w-[79.813rem]">
+        <h2>Top Rated</h2>
+        <p>see more!</p>
+        <div className="flex flex-wrap justify-between w-[79.813rem]">
+          {data.results.slice(0, 10).map((movie: MovieType) => {
+            return (
+              <div className="w-[14.375rem] h-[27.438rem] overflow-hidden rounded-[8px]">
+                <img
+                  src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`}
+                  alt="..loading"
+                  className="w-[14.358rem] h-[21.25rem]"
+                />
+                <div className="bg- bg-yellow-500 w-[14.358rem] h-[4.938rem] p-2">
+                  <p>⭐{movie?.vote_average}/10</p>
+                  <p>{movie?.original_title}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };
