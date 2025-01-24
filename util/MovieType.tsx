@@ -3,5 +3,6 @@ export type MovieType = {
   poster_path: string;
   vote_average: number;
   backdrop_path: string;
+  id: number;
   overview: string;
 };
