@@ -1,14 +1,15 @@
-import { TOKEN } from "../../util/constants";
-import { MovieType } from "../../util/MovieType";
+
+import Image from "next/image";
 import { ModeToggle } from "./theme-toggle";
-import { Button } from "./ui/button";
+
 
 export const Header = async () => {
   return (
     <div className="w-[100vw] flex justify-center">
       <div className="w-[79.813rem] flex flex-wrap justify-between ">
         <div className="flex">
-          <img src="moviez.icon.svg" alt="" />
+          <Image src="moviez.icon.svg" alt="" width={1000} height={1000}
+          className="w-[20px] h-[20px]"/>
           <p>MovieZ</p>
         </div>
         <div className="flex">

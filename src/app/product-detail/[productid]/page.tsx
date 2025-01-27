@@ -15,7 +15,7 @@ export default async function trailer() {
       const data = await response.json();
     return (
         <div>
-            <p>vj</p>
+            <p>{data?.id}</p>
         </div>
     )
 }
