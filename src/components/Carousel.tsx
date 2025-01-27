@@ -34,7 +34,7 @@ export async function CarouselDemo() {
                 <CardContent
                   className=" w-[100%] h-[600px] !bg-center !bg-cover bg-no-repeat aspect-square"
                   style={{
-                    background: `url( https://image.tmdb.org/t/p/original/${data?.backdrop_path} )`,
+                    background: `url( https://image.tmdb.org/t/p/original/${data?.backdrop_path})`,
                   }}
                 >
                   {/* <img alt="..loading" className="w-[100%] h-[600px]" /> */}
