@@ -25,7 +25,7 @@ export async function CarouselDemo() {
   const data = await response.json();
   console.log(data);
   return (
-    <Carousel className="relative w-[100%] h-[600px] m-auto ">
+    <Carousel className="relative w-[100vw] h-[600px] m-auto ">
       <CarouselContent className="w-[100%] h-[600px]  ">
         {data.results.map((data: MovieType, index: number) => (
           <CarouselItem key={index}>
