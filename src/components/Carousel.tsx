@@ -32,7 +32,7 @@ export async function CarouselDemo() {
             <div className="p-1">
               <Card className="relative">
                 <CardContent
-                  className=" w-[100%] h-[600px] !bg-center !bg-cover bg-no-repeat aspect-square"
+                  className=" w-[100%] h-[600px] !bg-center !bg-cover bg-no-repeat aspect-square z-10"
                   style={{
                     background: `url( https://image.tmdb.org/t/p/original/${data?.backdrop_path})`,
                   }}
@@ -43,7 +43,7 @@ export async function CarouselDemo() {
                     <p>Now Playing:</p>
                     <h2 className="font-extrabold">{data?.original_title}</h2>
                     <p>⭐{data?.vote_average}/10</p>
-                    <p className="w-[250px]">{data?.overview}</p>
+                    <p className="w-[250px] text-white">{data?.overview}</p>
                     <Button>watch trailer</Button>
                  </div>
               </Card>

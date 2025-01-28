@@ -71,17 +71,21 @@ export const Upcoming = async () => {
         <div className="flex flex-wrap justify-between w-[79.813rem]">
           {data.results.slice(0, 10).map((movie: MovieType, index: number) => {
             return (
-              <Card key={index} className="w-[14.375rem] h-[26.2rem] overflow-hidden rounded-[8px] mb-6">
-                <Image
-                  src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`}
-                  alt="..loading"
-                  className="w-[14.358rem] h-[21.25rem]"
-                  width={1000} height={1000}
-                />
-                <div className=" w-[14.358rem] h-[4.938rem] p-2">
-                  <p>⭐{movie?.vote_average}/10</p>
-                  <p>{movie?.original_title}</p>
-                </div>
+              <Card key={index} className="w-[14.375rem] h-[26.200rem] overflow-hidden rounded-[8px] mb-6">
+                <Link href={`/product-detail/${movie?.id}`}>
+                  <div>
+                    <Image
+                      src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`}
+                      alt="..loading"
+                      className="w-[14.358rem] h-[21.25rem]"
+                      width={1000} height={1000}
+                    />
+                    <div className="w-[14.358rem] h-[4.938rem] p-2">
+                      <p>⭐{movie?.vote_average}/10</p>
+                      <p>{movie?.original_title}</p>
+                    </div>
+                  </div>
+                </Link>
               </Card>
             );
           })}
@@ -112,17 +116,21 @@ export const Top_rated = async () => {
         <div className="flex flex-wrap justify-between w-[79.813rem]">
           {data.results.slice(0, 10).map((movie: MovieType, index: number) => {
             return (
-              <Card key={index} className="w-[14.375rem] h-[26.2rem] overflow-hidden rounded-[8px] mb-6">
-                <Image
-                  src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`}
-                  alt="..loading"
-                  className="w-[14.358rem] h-[21.25rem]"
-                  width={1000} height={1000}
-                />
-                <div className="w-[14.358rem] h-[4.938rem] p-2">
-                  <p>⭐{movie?.vote_average}/10</p>
-                  <p>{movie?.original_title}</p>
-                </div>
+              <Card key={index} className="w-[14.375rem] h-[26.200rem] overflow-hidden rounded-[8px] mb-6">
+                <Link href={`/product-detail/${movie?.id}`}>
+                  <div>
+                    <Image
+                      src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`}
+                      alt="..loading"
+                      className="w-[14.358rem] h-[21.25rem]"
+                      width={1000} height={1000}
+                    />
+                    <div className="w-[14.358rem] h-[4.938rem] p-2">
+                      <p>⭐{movie?.vote_average}/10</p>
+                      <p>{movie?.original_title}</p>
+                    </div>
+                  </div>
+                </Link>
               </Card>
             );
           })}
