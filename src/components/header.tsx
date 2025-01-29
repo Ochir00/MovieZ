@@ -32,10 +32,10 @@ export const Header = async () => {
           <input type="text" className="w-[379px] h-[36px] border-[1px] border-solid rounded-[6px]"/>
         </div>
         <div className="flex">
-          <ModeToggle />
+          <ModeToggle/>
         </div>
       </div>
     </Card>
-    
+
   );
 };

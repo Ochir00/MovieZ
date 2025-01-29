@@ -1,4 +1,3 @@
-import { Header } from "@/components/header";
 import { Popular, Top_rated, Upcoming } from "../components/cartbody";
 import { CarouselDemo } from "@/components/Carousel";
 
