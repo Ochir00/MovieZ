@@ -3,8 +3,12 @@ import { TOKEN } from "../../../../util/constants";
 
 type zgrlutag = {
   name: string;
+  params: string;
 };
-
+type juji = {
+  job: string;
+  name: string;
+};
 const ProductPage = async ({
   params: { productid },
 }: {
@@ -29,12 +33,19 @@ const ProductPage = async ({
       },
     }
   );
-  const jujegchid = await jujegchids.json();
+  const jujechid = await jujegchids.json();
   const data = await response.json();
   const runtimehour = data?.runtime / 60;
   const runtimeminut = data?.runtime % 60;
-  console.log(data);
 
+  const directors = jujechid?.crew.filter((jujig: juji) => {
+    return jujig.job === "Director";
+  });
+  
+  const write = jujechid?.crew.filter((jujig: juji) => {
+    return jujig.job === "Director";
+  });
+  console.log("ddddd", directors);
   return (
     <div className="w-[100vw] flex justify-center">
       <div className="w-[1080px] ">
@@ -67,10 +78,13 @@ const ProductPage = async ({
         </div>
         <div className="mt-[30px]">
           <div className="flex gap-1">
-            {data?.genres.map((datas: zgrlutag, index:number ) => {
-              console.log(jujegchid);
+            {data?.genres.map((datas: zgrlutag, index: number) => {
+              console.log(jujechid);
               return (
-                <p key={index} className="px-1 bg-gray-500 rounded-[9px] font-black ">
+                <p
+                  key={index}
+                  className="px-1 bg-gray-500 rounded-[9px] font-black "
+                >
                   {datas.name}
                 </p>
               );
@@ -83,7 +97,7 @@ const ProductPage = async ({
         <div>
           <div className="flex">
             <p>Director</p>
-            <p></p>
+            <p>{directors[0].name}</p>
           </div>
           <div className="flex">
             <p>Writers</p>
@@ -91,7 +105,9 @@ const ProductPage = async ({
           </div>
           <div className="flex">
             <p>Stars</p>
-            <p> </p>
+            {jujechid.cast.map((index)=>{
+              return <p>{index.name}</p>
+            })}
           </div>
         </div>
       </div>
