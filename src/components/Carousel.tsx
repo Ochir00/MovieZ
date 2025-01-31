@@ -40,12 +40,14 @@ export async function CarouselDemo() {
                   {/* <img alt="..loading" className="w-[100%] h-[600px]" /> */}
                 </CardContent>
                 <div className="absolute top-32 left-40 ">
-                    <p>Now Playing:</p>
-                    <h2 className="font-extrabold">{data?.original_title}</h2>
-                    <p>⭐{data?.vote_average}/10</p>
-                    <p className="w-[250px] text-white">{data?.overview}</p>
-                    <Button>watch trailer</Button>
-                 </div>
+                  <p>Now Playing:</p>
+                  <h2 className="font-extrabold text-[36px] ">{data?.original_title}</h2>
+                  <p>⭐{data?.vote_average}/10</p>
+                  <p className="w-[250px] h-[130px] overflow-hidden text-white text-[14px] font-semibold">
+                    {data?.overview}
+                  </p>
+                  <Button>watch trailer</Button>
+                </div>
               </Card>
             </div>
           </CarouselItem>

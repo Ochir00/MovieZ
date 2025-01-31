@@ -24,4 +24,5 @@ const SVGComponent = (props: svg) => (
     </g>
   </svg>
 );
+
 export default SVGComponent;
