@@ -25,7 +25,6 @@ export async function Genrebutton() {
     }
   );
   const data = await response.json();
-  console.log(data);
   return (
     <Card className="w-[97px] h-[36px] flex justify-center items-center rounded-[6px]">
       <Popover>
@@ -37,8 +36,7 @@ export async function Genrebutton() {
           </div>
           <div className="w-[100%] flex gap-4 flex-wrap mt-[15px] ">
             {data.genres.map((props: zgrlutga, key: number) => {
-              
-              return <Link href={`/genres/${props.id}`} key={key}><div className="border rounded-[9px]  px-[10px] text-[12px] font-semibold flex items-center gap-[5px]">{props.name} <ChevronRight className="w-[14px] p-0"/> </div></Link>
+              return <Link href={`/genres/${props.id}`} key={key}> <div className="border rounded-[9px]  px-[10px] text-[12px] font-semibold flex items-center gap-[5px]">{props.name} <ChevronRight className="w-[14px] p-0"/> </div></Link>
               
             })}
           </div>

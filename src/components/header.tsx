@@ -37,6 +37,8 @@ export const Header = async () => {
     </Card>
   );
 };
+
+
 export const Footer = async () => {
   return (
     <div className="w-[100vw] flex justify-center bg-[#4338CA] text-white">

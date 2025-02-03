@@ -1,6 +1,5 @@
 import React from "react";
 import { TOKEN } from "../../../../util/constants";
-import { Card } from "@/components/ui/card";
 import { WebCard } from "@/components/cartbody";
 
 type zgrlutag = {
@@ -47,8 +46,6 @@ const ProductPage = async ({
   const write = jujechid?.crew.filter((jujig: juji) => {
     return jujig.job === "Writer";
   });
-
-  console.log("ddddd", directors);
   return (
     <div className="w-[100vw] flex justify-center">
       <div className="w-[1080px] ">

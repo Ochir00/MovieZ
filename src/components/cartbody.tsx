@@ -16,6 +16,8 @@ export const Popular = async () => {
     }
   );
   const data = await response.json();
+  
+
 
   return (
     <div className="w-[100vw] flex justify-center mt-[40px] ">
