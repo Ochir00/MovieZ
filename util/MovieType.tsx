@@ -6,3 +6,8 @@ export type MovieType = {
   id: number;
   overview: string;
 };
+
+export type genreType = {
+  id: number;
+  name: string;
+};
