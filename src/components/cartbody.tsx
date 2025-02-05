@@ -17,13 +17,13 @@ export const Popular = async () => {
   );
   const data = await response.json();
   
-
+///category/upcoming
 
   return (
     <div className="w-[100vw] flex justify-center mt-[40px] ">
       <div className="flex flex-wrap justify-between w-[79.813rem]">
         <h2 className="font-semibold text-[24px]">Popular</h2>
-        <p className="text-[14px] font-medium">see more!</p>
+        <Link href={"/category/popular"}><p className="text-[14px] font-medium">see more!</p></Link>
         <div className="flex flex-wrap justify-between w-[79.813rem] mt-[20px]">
           {data.results.slice(0, 10).map((movie: MovieType, index: number) => {
             return (
@@ -72,7 +72,7 @@ export const Upcoming = async () => {
     <div className="w-[100vw] flex justify-center mt-[40px] ">
       <div className="flex flex-wrap justify-between w-[79.813rem]">
         <h2 className="font-semibold text-[24px]">Upcoming</h2>
-        <p className="text-[14px] font-medium">see more!</p>
+        <Link href={"/category/upcoming"}><p className="text-[14px] font-medium">see more!</p></Link>
         <div className="flex flex-wrap justify-between w-[79.813rem] mt-[20px]">
           {data.results.slice(0, 10).map((movie: MovieType, index: number) => {
             return (
@@ -121,7 +121,7 @@ export const Top_rated = async () => {
     <div className="w-[100vw] flex justify-center mt-[40px]  ">
       <div className="flex flex-wrap justify-between w-[79.813rem] mt-[20px]">
         <h2 className="font-semibold text-[24px]">Top Rated</h2>
-        <p className="text-[14px] font-medium">see more!</p>
+        <Link href={"/category/top_rated"}><p className="text-[14px] font-medium">see more!</p></Link>
         <div className="flex flex-wrap justify-between w-[79.813rem] mt-[20px]">
           {data.results.slice(0, 10).map((movie: MovieType, index: number) => {
             return (

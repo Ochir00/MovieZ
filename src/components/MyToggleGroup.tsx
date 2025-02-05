@@ -17,7 +17,6 @@ export const MyToggle = ({ genres }: { genres: genreType[] }) => {
       type="multiple"
     >
       {genres.map((props: genreType, index: number) => {
-        console.log(ToggleGroupItem);
         return (
           <ToggleGroupItem
             key={index}

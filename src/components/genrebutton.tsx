@@ -43,7 +43,6 @@ export async function Genrebutton() {
             <ChevronRight className="h-4" />
           </ToggleGroupItem></Link>
               )//<Link href={`/genres?genresId=${props.id}`} key={key}> <div className="border rounded-[9px]  px-[10px] text-[12px] font-semibold flex items-center gap-[5px]">{props.name} <ChevronRight className="w-[14px] p-0"/> </div></Link>
-              
             })}
           </ToggleGroup>
         </PopoverContent>

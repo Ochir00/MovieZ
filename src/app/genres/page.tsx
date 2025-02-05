@@ -1,10 +1,18 @@
 import { MovieType } from "../../../util/MovieType";
 import { Card } from "@/components/ui/card";
-import { ChevronRight } from "lucide-react";
 import { TOKEN } from "../../../util/constants";
 import Link from "next/link";
 import Image from "next/image";
 import { MyToggle } from "@/components/MyToggleGroup";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 
 const Home = async ({
   searchParams,
@@ -49,7 +57,7 @@ const Home = async ({
             </div>
           </div>
 
-          <div className="w-[806px] flex flex-wrap gap-5 ml-3">
+          <div className="w-[806px] flex flex-wrap gap-5 ml-3 pb-10">
             {moviegenres.results.map((movie: MovieType, index: number) => {
               return (
                 <Card
@@ -74,6 +82,30 @@ const Home = async ({
                 </Card>
               );
             })}
+            <Pagination>
+              <PaginationContent>
+                <PaginationItem>
+                  <PaginationPrevious href={`/genres?genresId=${genresId}`} />
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationLink href="#">1</PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationLink href="#" isActive>
+                    2
+                  </PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationLink href="#">3</PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationEllipsis />
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationNext href="#" />
+                </PaginationItem>
+              </PaginationContent>
+            </Pagination>
           </div>
         </div>
       </div>
