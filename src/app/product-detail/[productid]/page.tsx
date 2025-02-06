@@ -70,7 +70,8 @@ const ProductPage = async ({
               background: `url( https://image.tmdb.org/t/p/original/${data?.backdrop_path} )`,
             }}
             className="w-[760px] h-[600px] !bg-center !bg-cover bg-no-repeat aspect-square"
-          ></div>
+          >
+          </div>
         </div>
         <div className="mt-[30px]">
           <div className="flex gap-1">
