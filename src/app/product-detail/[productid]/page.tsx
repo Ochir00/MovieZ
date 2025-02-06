@@ -1,7 +1,14 @@
 import React from "react";
 import { TOKEN } from "../../../../util/constants";
 import { WebCard } from "@/components/cartbody";
-
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 type zgrlutag = {
   name: string;
   params: string;
@@ -35,7 +42,21 @@ const ProductPage = async ({
     }
   );
   const jujechid = await jujegchids.json();
-  const data = await response.json();
+  const data = await response.json()
+    console.log(data);
+  
+    const responses = await fetch(
+      `https://api.themoviedb.org/3/movie/${data.id}/videos?language=en-US`,
+      {
+        headers: {
+          Authorization: `Bearer ${TOKEN}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const datas = await responses.json();
+    console.log("datas", datas);
+
   const runtimehour = data?.runtime / 60;
   const runtimeminut = data?.runtime % 60;
 
@@ -69,8 +90,19 @@ const ProductPage = async ({
             style={{
               background: `url( https://image.tmdb.org/t/p/original/${data?.backdrop_path} )`,
             }}
-            className="w-[760px] h-[600px] !bg-center !bg-cover bg-no-repeat aspect-square"
-          >
+            className="w-[760px] h-[600px] !bg-center !bg-cover bg-no-repeat aspect-square relative"
+          > <Dialog>
+          <DialogTrigger className="bg-gray-100 w-12 h-12 rounded-full absolute bottom-10 left-10 text-black">play</DialogTrigger>
+          <DialogContent className="min-w-[600px] h-[400px] p-0 gap-0 overflow-hidden ">
+            <DialogTitle></DialogTitle>
+            <iframe
+              width="auto"
+              height="auto"
+              src={`https://www.youtube.com/embed/${datas.results[1]?.key}`}
+              className="w-[600px] h-[400px]"
+            ></iframe>
+          </DialogContent>
+        </Dialog>
           </div>
         </div>
         <div className="mt-[30px]">
