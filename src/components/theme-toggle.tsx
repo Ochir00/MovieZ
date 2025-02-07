@@ -13,6 +13,7 @@ export function ModeToggle() {
   const {theme, setTheme} = useTheme();
   function webmode() {
     setTheme(theme == "dark" ? "light" : "dark" )
+    console.log("working")
   }
   return (
     <DropdownMenu>

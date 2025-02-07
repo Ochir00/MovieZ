@@ -1,3 +1,4 @@
+// "use client";
 import { ModeToggle } from "./theme-toggle";
 import SVGComponent from "@/svg/Svg";
 import Link from "next/link";
@@ -7,8 +8,7 @@ import Footersvg from "@/svg/Footersvg";
 import { Phone } from "lucide-react";
 import { Mail } from "lucide-react";
 import { Genrebutton } from "./genrebutton";
-
-
+import { SearchInput } from "./SearchInput";
 
 export const Header = async () => {
   return (
@@ -23,12 +23,9 @@ export const Header = async () => {
 
         <div className="flex gap-4">
           <div className="flex gap-4 items-center">
-            <Genrebutton/>
+            <Genrebutton />
           </div>
-          <input
-            type="text"
-            className="w-[379px] h-[36px] border-[1px] border-solid rounded-[6px]"
-          />
+          <SearchInput  />
         </div>
         <div className="flex">
           <ModeToggle />
@@ -37,7 +34,6 @@ export const Header = async () => {
     </Card>
   );
 };
-
 
 export const Footer = async () => {
   return (

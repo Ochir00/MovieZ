@@ -68,7 +68,7 @@ export async function CarouselDemo() {
                   </p>
                   {/* <Button>watch trailer</Button> */}
                   <Dialog>
-                    <DialogTrigger><Button>watch trailer</Button></DialogTrigger>
+                    <DialogTrigger className="p-1 bg-gray-900 border-white">watch trailer</DialogTrigger>
                     <DialogContent className="min-w-[600px] h-[400px] p-0 gap-0 overflow-hidden ">
                       <DialogTitle></DialogTitle>
                       <iframe
