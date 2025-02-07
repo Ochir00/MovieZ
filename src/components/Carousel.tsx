@@ -9,7 +9,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { MovieType } from "../../util/MovieType";
-import { Button } from "./ui/button";
 import {
   Dialog,
   DialogContent,
@@ -41,7 +40,6 @@ export async function CarouselDemo() {
     }
   );
   const datas = await responses.json();
-  console.log("datas", datas);
   return (
     <Carousel className="relative w-[100vw] h-[600px] m-auto ">
       <CarouselContent className="w-[100%] h-[600px]  ">
@@ -57,9 +55,9 @@ export async function CarouselDemo() {
                 >
                   {/* <img alt="..loading" className="w-[100%] h-[600px]" /> */}
                 </CardContent>
-                <div className="absolute top-32 left-40 ">
+                <div className="absolute top-32 left-40 text-white">
                   <p>Now Playing:</p>
-                  <h2 className="font-extrabold text-[36px] ">
+                  <h2 className="font-extrabold text-[36px] text-white">
                     {data?.original_title}
                   </h2>
                   <p>⭐{data?.vote_average}/10</p>

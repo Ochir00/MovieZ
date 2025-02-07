@@ -7,6 +7,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { SearchMovie } from "./Searchmovie";
 
 export const SearchInput = () => {
   return (
@@ -18,7 +19,9 @@ export const SearchInput = () => {
         <PopoverContent
           className="w-80"
           onOpenAutoFocus={(e) => e.preventDefault()}
-        ></PopoverContent>
+        >
+            <SearchMovie searchValue={"a"}/>
+        </PopoverContent>
       </Popover>
     </div>
   );
