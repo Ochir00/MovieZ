@@ -8,7 +8,7 @@ type zgrlutag = {
 };
 
 const ProductPage = async () => {
-  const responses = await fetch(`http://localhost:3000/popular`);
+  const responses = await fetch(`http://localhost:3000/`);
   const data = await responses.json();
   const movie = data.data.result;
   console.log(data);
