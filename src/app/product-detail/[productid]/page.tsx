@@ -7,8 +7,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+
 type zgrlutag = {
   name: string;
   params: string;
@@ -135,8 +134,8 @@ const ProductPage = async ({
           </div>
           <div className="flex mt-[20px] border-b-[1px] pb-[15px]">
             <p className="w-[64px] mr-[53px] font-semibold">Stars</p>
-            {jujechid?.cast.slice(0, 5).map((index: juji) => {
-              return <p className="font-semibold">{index.name}</p>;
+            {jujechid?.cast.slice(0, 5).map((index: juji, key: number) => {
+              return <p key={key} className="font-semibold">{index.name}</p>;
             })}
           </div>
         </div>

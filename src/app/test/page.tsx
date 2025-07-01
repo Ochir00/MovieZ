@@ -3,9 +3,6 @@ import React from "react";
 import { MovieType } from "../../../util/MovieType";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
-type zgrlutag = {
-  data: object[];
-};
 
 const ProductPage = async () => {
   const responses = await fetch(`http://localhost:3000/`);
