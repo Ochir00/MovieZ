@@ -11,3 +11,11 @@ export type genreType = {
   id: number;
   name: string;
 };
+export type MovieTypes = {
+  id: number;
+  original_title: string;
+  vote_average: number;
+  poster_path: string | null;
+  overview: string;
+  release_date: string;
+};
